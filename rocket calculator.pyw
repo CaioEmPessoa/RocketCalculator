@@ -5,7 +5,6 @@ root = ctk.CTk()
 
 root.title('Rocket Calculator')
 
-
 def button_numb(val):
     conta_completa = ''
 
@@ -44,7 +43,6 @@ def button_numb(val):
         entry.insert('end', resultado) # insere a resposta do calculo na area de prompt
         conta.configure(text=str(conta_completa) + " = " + str(resultado))
         calculos.clear()
-
  
     # se for um número
     else:
@@ -70,7 +68,6 @@ for numb in button_numbers:
         column = 0
         row += 1
 # >-----------------------------------------------------------
-
 # Entrada
 entry = ctk.CTkEntry(root, width=200)
 entry.grid(row=1, column=0, columnspan=3, padx=10, pady=10)
@@ -86,20 +83,16 @@ clear = ctk.CTkButton(root, text='Clear', width=100, command=lambda: button_numb
 clear.grid(row=5, column=3, padx=10, pady=10)
 
 # botões de conta
-soma = ctk.CTkButton(root, text='+', width=100,
-                     command=lambda: button_numb('+'))
+soma = ctk.CTkButton(root, text='+', width=100,command=lambda: button_numb('+'))
 soma.grid(row=1, column=3, padx=10)
 
-menos = ctk.CTkButton(root, text='-', width=100,
-                     command=lambda: button_numb('-'))
+menos = ctk.CTkButton(root, text='-', width=100,command=lambda: button_numb('-'))
 menos.grid(row=2, column=3)
 
-mult = ctk.CTkButton(root, text='*', width=100,
-                     command=lambda: button_numb('*'))
+mult = ctk.CTkButton(root, text='*', width=100,command=lambda: button_numb('*'))
 mult.grid(row=3, column=3)
 
-div = ctk.CTkButton(root, text='/', width=100,
-                     command=lambda: button_numb('/'))
+div = ctk.CTkButton(root, text='/', width=100,command=lambda: button_numb('/'))
 div.grid(row=4, column=3)
 
 root.mainloop()
